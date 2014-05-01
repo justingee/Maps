@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="angular-google-maps-example">
+<head>
+ <script src="bower_components/angular/angular.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="/bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+  <script src="/bower_components/underscore/underscore-min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF4qjUgBvbWRqkpLPnfa-3OCplR61nko0&sensor=false"></script>
+ 
+	<title></title>
+	<style>
+	.angular-google-map {
+			display: block;
+		}
+	</style>
+</head>
+<body ng-controller="ExampleController">
+	<google-map
+		center="centerProperty"
+		zoom="zoomProperty" 
+		markers="markersProperty"
+		latitude="clickedLatitudeProperty"
+		longitude="clickedLongitudeProperty"
+		mark-click="true"
+		draggable="true"
+		style="height: 450px; width: 100%">
+	</google-map>
+	<script>
+	var module = angular.module("angular-google-maps-example", ["google-maps"]);
+	function ExampleController ($scope) {
+		angular.extend($scope, {
+			centerProperty: {
+				lat: 45,
+				lng: -73
+			},
+			zoomProperty: 8,
+			markersProperty: [ {
+					latitude: 45,
+					longitude: -74
+				}],
+			clickedLatitudeProperty: null,	
+			clickedLongitudeProperty: null,
+		});
+	}
+	</script>
+
+</body>
+</html>

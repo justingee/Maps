@@ -1,0 +1,31 @@
+{
+  "name": "goog10",
+  "version": "0.1.0",
+  "description": "Yet another amazing AngularJS app",
+  "keywords": [
+    "angular"
+  ],
+  "homepage": "https://github.com/justingee/goog10",
+  "bugs": "https://github.com/justingee/goog10/issues",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": "https://github.com/justingee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justingee/goog10.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "dependencies": {
+    "angular-strap": "~2.0.0",
+    "angular-animate": "~1.2.10",
+    "angular-resource": "~1.2.10",
+    "angular-route": "~1.2.10",
+    "angular": "~1.2.10"
+  }
+}
